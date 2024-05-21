@@ -1,0 +1,81 @@
+/* styles.css */
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 50vh;
+  background-color: #191919;
+  margin: 0;
+}
+
+.timer-container {
+  text-align: center;
+  border-radius: 2em;
+  background-color: #5863ff;
+  padding: 3rem;
+  box-shadow: inset 5px 5px 10px #838bfc, 5px 5px 10px #666;
+}
+
+.input-container {
+  margin-bottom: 20px;
+  font-size: 32px;
+  text-align: center;
+}
+
+input {
+  width: 1.5em;
+  text-align: center;
+  border-radius: 0.3em;
+  padding: 3px 0.5em;
+  font-size: 40px;
+  border: none;
+}
+
+/* 전체 브라우저에서 숫자 증감 화살표를 제거 */
+input[type="number"] {
+  -moz-appearance: textfield; /* Firefox */
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none; /* Chrome, Safari, Edge */
+  margin: 0; /* Chrome, Safari, Edge */
+}
+
+/* Edge와 Internet Explorer에서 숫자 증감 화살표를 제거 */
+input[type="number"] {
+  -ms-appearance: textfield; /* Internet Explorer 10+ */
+}
+
+/* Opera에서 숫자 증감 화살표를 제거 */
+input[type="number"]::-moz-inner-spin-button {
+  -moz-appearance: none; /* Firefox */
+}
+
+.buttons {
+  margin-top: 25px;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 10px 13px 0;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 1rem;
+  background-color: #272f9e;
+  color: #fff;
+  box-shadow: 3px 3px 5px #666;
+}
+
+.buttons #stop {
+  background-color: #b421f8;
+}
+
+p {
+  display: flex;
+  color: #fff;
+  font-size: 32px;
+}
