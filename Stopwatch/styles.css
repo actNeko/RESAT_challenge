@@ -2,35 +2,46 @@
 body {
   font-family: Arial, sans-serif;
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 50vh;
-  background-color: #191919;
+  text-align: center;
+  height: 100vh;
+  background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
   margin: 0;
 }
 
-.timer-container {
-  text-align: center;
-  border-radius: 2em;
-  background-color: #5863ff;
-  padding: 3rem;
-  box-shadow: inset 5px 5px 10px #838bfc, 5px 5px 10px #666;
-}
-
 .input-container {
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
   margin-bottom: 20px;
   font-size: 32px;
   text-align: center;
+}
+.input-container p {
+  margin: 0 6px;
 }
 
 input {
   width: 1.5em;
   text-align: center;
-  border-radius: 0.3em;
-  padding: 3px 0.5em;
-  font-size: 40px;
+  padding: 5px 0px 5px 5px;
+  font-size: 2.5em;
   border: none;
+  color: #fff;
+  letter-spacing: 5px;
+  background-color: transparent;
+  outline: none;
+}
+
+input:focus {
+  border-bottom: 2px solid #ececec;
+}
+
+input::placeholder {
+  color: #ffffff;
 }
 
 /* 전체 브라우저에서 숫자 증감 화살표를 제거 */
@@ -55,7 +66,7 @@ input[type="number"]::-moz-inner-spin-button {
 }
 
 .buttons {
-  margin-top: 25px;
+  margin-top: 30px;
 }
 
 button {
@@ -65,17 +76,18 @@ button {
   cursor: pointer;
   border: none;
   border-radius: 1rem;
-  background-color: #272f9e;
+  background-color: #04378f;
   color: #fff;
-  box-shadow: 3px 3px 5px #666;
+  box-shadow: 3px 3px 3px #605e7e;
 }
 
 .buttons #stop {
-  background-color: #b421f8;
+  background-color: #b30faa;
 }
 
-p {
+h1 {
+  margin-top: 15vh;
   display: flex;
   color: #fff;
-  font-size: 32px;
+  font-size: 28px;
 }
