@@ -35,6 +35,19 @@ function limitTimes(event) {
   }
 }
 
+//스탑워치 입력 활성화 비활성화
+function disableInputs() {
+  document.getElementById("hours").disabled = true;
+  document.getElementById("minutes").disabled = true;
+  document.getElementById("seconds").disabled = true;
+}
+
+function enableInputs() {
+  document.getElementById("hours").disabled = false;
+  document.getElementById("minutes").disabled = false;
+  document.getElementById("seconds").disabled = false;
+}
+
 function startTimer() {
   const hours = parseInt(document.getElementById("hours").value) || 0;
   const minutes = parseInt(document.getElementById("minutes").value) || 0;
@@ -43,6 +56,7 @@ function startTimer() {
   totalTime = hours * 3600 + minutes * 60 + seconds;
 
   if (totalTime > 0) {
+    disableInputs(); // 입력 필드를 비활성화합니다.
     timer = setInterval(countDown, 1000);
   }
 }
@@ -51,6 +65,7 @@ function countDown() {
   if (totalTime <= 0) {
     clearInterval(timer);
     alert("TIME'S UP!");
+    enableInputs(); // 타이머가 끝나면 입력 필드를 활성화합니다.
   } else {
     totalTime--;
     const hours = String(Math.floor(totalTime / 3600)).padStart(2, "0");
@@ -72,6 +87,7 @@ function stopTimer() {
 
 function resetTimer() {
   clearInterval(timer);
+  enableInputs(); // 리셋 시 입력 필드를 활성화합니다.
   document.getElementById("hours").value = "00";
   document.getElementById("minutes").value = "00";
   document.getElementById("seconds").value = "00";
