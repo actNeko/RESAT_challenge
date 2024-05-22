@@ -160,11 +160,18 @@ document.addEventListener("DOMContentLoaded", () => {
         const li = document.createElement("li");
         li.className = "completed";
         li.innerHTML = `
-              <span>${todo.text} (${priorityLabel(todo.priority)})</span>
-              <input type="checkbox" checked data-id="${todo.id}">
-              <button class="edit-button" data-id="${todo.id}">수정</button>
-              <button class="delete-button" data-id="${todo.id}">삭제</button>
-          `;
+        <input type="checkbox" ${todo.completed ? "checked" : ""} data-id="${
+          todo.id
+        }">
+        <div class="edit-priority ${todo.priority}">${priorityLabel(
+          todo.priority
+        )}</div>
+        <span>${todo.text}</span>
+        <div>
+        <button class="edit-button" data-id="${todo.id}">수정</button>
+        <button class="delete-button" data-id="${todo.id}">삭제</button>
+        </div>
+    `;
         todoList.appendChild(li);
       });
   });
@@ -175,10 +182,17 @@ document.addEventListener("DOMContentLoaded", () => {
       .forEach((todo) => {
         const li = document.createElement("li");
         li.innerHTML = `
-              <span>${todo.text} (${priorityLabel(todo.priority)})</span>
-              <input type="checkbox" data-id="${todo.id}">
+              <input type="checkbox" ${
+                todo.completed ? "checked" : ""
+              } data-id="${todo.id}">
+              <div class="edit-priority ${todo.priority}">${priorityLabel(
+          todo.priority
+        )}</div>
+              <span>${todo.text}</span>
+              <div>
               <button class="edit-button" data-id="${todo.id}">수정</button>
               <button class="delete-button" data-id="${todo.id}">삭제</button>
+              </div>
           `;
         todoList.appendChild(li);
       });

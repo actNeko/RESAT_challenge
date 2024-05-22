@@ -116,7 +116,7 @@ button {
 }
 #todo-list li span {
   text-align: left;
-  width: 400px;
+  width: 420px;
   font-size: 18px;
   white-space: nowrap; /* 텍스트가 줄 바꿈되지 않도록 설정 */
   overflow: hidden; /* 텍스트가 넘칠 경우 가림 */
@@ -126,6 +126,11 @@ button {
 #todo-list li.completed span {
   text-decoration: line-through;
   color: #888;
+}
+
+#todo-list li.completed .edit-priority {
+  text-decoration: line-through;
+  background-color: #a1a1a1;
 }
 
 /* 수정 버튼 스타일 */
