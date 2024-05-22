@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do 리스트</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>To-Do List</h1>
+    <div>
+      <input type="text" id="todo-text" placeholder="할 일을 입력하세요" />
+      <select id="priority-select">
+        <option value="low">낮 음</option>
+        <option value="medium">보 통</option>
+        <option value="high">높 음</option>
+        <option value="very-high">아주 높음</option>
+      </select>
+      <button id="add-todo-button">할 일 추가하기</button>
+    </div>
+    <div>
+      <button id="all-filter">전체</button>
+      <button id="completed-filter">해결</button>
+      <button id="uncompleted-filter">미해결</button>
+      <button id="sort-priority">우선순위 정렬</button>
+    </div>
+    <ul id="todo-list"></ul>
+
+    <!-- 수정 모달 -->
+    <div id="modal-bg" style="display: none">
+      <div id="edit-modal">
+        <textarea
+          id="edit-todo-text"
+          placeholder="할 일을 입력하세요"
+        ></textarea>
+        <select id="edit-priority-select">
+          <option value="low">낮 음</option>
+          <option value="medium">보 통</option>
+          <option value="high">높 음</option>
+          <option value="very-high">아주 높음</option>
+        </select>
+        <div class="button-group">
+          <button id="save-edit-button">저장</button>
+          <button id="cancel-edit-button">취소</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
