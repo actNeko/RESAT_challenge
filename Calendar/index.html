@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calendar</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="calendar">
+      <div class="header">
+        <button id="prev">◀</button>
+        <span id="monthYear"></span>
+        <button id="next">▶</button>
+      </div>
+      <div class="weekdays">
+        <div class="sun">Sun</div>
+        <div>Mon</div>
+        <div>Tue</div>
+        <div>Wed</div>
+        <div>Thu</div>
+        <div>Fri</div>
+        <div class="sat">Sat</div>
+      </div>
+      <div class="days" id="days"></div>
+    </div>
+
+    <div class="modal" id="modal">
+      <div class="modal-content">
+        <textarea id="memo" placeholder="Enter your memo here..."></textarea>
+        <button id="saveMemo">저장</button>
+        <button id="close">닫기</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
