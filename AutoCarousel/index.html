@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>carousel</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="slider-wrapper">
+      <div id="carousel">
+        <div class="slider">
+          <img src="./img/cat1.jpg" class="slide active" alt="cat1" />
+          <img src="./img/cat2.jpg" class="slide" alt="cat2" />
+          <img src="./img/cat3.jpg" class="slide" alt="cat3" />
+          <img src="./img/cat4.jpg" class="slide" alt="cat4" />
+          <img src="./img/cat5.jpg" class="slide" alt="cat5" />
+        </div>
+        <button class="prev" onclick="prevSlide()">&lt</button>
+        <button class="next" onclick="nextSlide()">&gt</button>
+        <h1>CATS</h1>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
